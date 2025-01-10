@@ -1,0 +1,33 @@
+package Practice;
+
+import java.util.Scanner;
+
+public class Even_Odd_Count {
+
+	public static void main(String[] args) {
+		System.out.println("Enter any number");
+		Scanner c=new Scanner(System.in);
+		int num=c.nextInt();
+		int rem=0;
+		int count=0;
+		int even=0;
+		int odd=0;
+		
+		while(num>0) {
+						
+			rem=num%10;
+			
+			if(rem%2==0) {
+				even++;	
+			}
+			else {
+				odd++;
+			}
+			num=num/10;
+		}
+		System.out.println("Total numbers "+count);
+		System.out.println("Even numbers "+even);
+		System.out.println("odd numbers "+odd);
+		c.close();
+	}
+}
